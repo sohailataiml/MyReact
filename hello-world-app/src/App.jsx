@@ -8,11 +8,12 @@ import Content from './Content'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [name, setName] = useState('')
 
   return (
     <>
-      <Header />
-      <Content />
+      <Header name={name} />
+      <Content name={name} onNameChange={setName} />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />

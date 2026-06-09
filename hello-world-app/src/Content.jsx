@@ -1,14 +1,10 @@
-import { useState } from 'react'
-
-export default function Content() {
-  const [name, setName] = useState('')
-
+export default function Content({ name, onNameChange }) {
   const handleClick = () => {
     console.log('Clicked')
   }
 
-  const handleNameChange = (e) => {
-    setName(e.target.value)
+  const handleNameChange = (event) => {
+    onNameChange(event.target.value)
   }
 
   return (

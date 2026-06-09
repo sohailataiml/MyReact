@@ -1,7 +1,7 @@
-export default function Header() {
+export default function Header({ name }) {
   return (
     <header className="app-header">
-      <h1>Gr4oceries List</h1>
+      <h1>{name ? `Groceries List for ${name}` : 'Groceries List'}</h1>
     </header>
   )
 }
